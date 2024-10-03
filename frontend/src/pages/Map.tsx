@@ -9,7 +9,7 @@ import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import ButtonSolid from '../components/ButtonSolid';
+// import ButtonSolid from '../components/ButtonSolid';
 import BackArrowSvg from '../assets/back_arrow.svg';
 import StopMkrIcon from '../assets/stopmkr.svg';
 import IdleMkrIcon from '../assets/idlemkr.svg';
