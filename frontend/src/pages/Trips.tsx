@@ -194,16 +194,14 @@ const Trips = () => {
               <div className="flex gap-4 justify-center md:w-fit w-full">
                 <div
                   onClick={deleteSelectedTrips}
-                  className={`text-[rgba(22,45,58,1)] w-[8.5rem] text-center text-xl py-1.5 rounded-lg border border-[rgba(22,45,58,1)] cursor-pointer transition-all ${
-                    selectedTrips.length === 0 ? 'opacity-50' : 'opacity-100'
-                  }`}>
+                  className={`text-[rgba(22,45,58,1)] w-[8.5rem] text-center text-xl py-1.5 rounded-lg border border-[rgba(22,45,58,1)] cursor-pointer transition-all ${selectedTrips.length === 0 ? 'opacity-50' : 'opacity-100'
+                    }`}>
                   Delete
                 </div>
                 <div
                   onClick={openTrips}
-                  className={`text-white w-[8.5rem] text-center text-xl py-1.5 rounded-lg border border-[rgba(22,45,58,1)] bg-[rgba(22,45,58,1)] cursor-pointer transition-all ${
-                    selectedTrips.length === 0 ? 'opacity-50' : 'opacity-100'
-                  }`}>
+                  className={`text-white w-[8.5rem] text-center text-xl py-1.5 rounded-lg border border-[rgba(22,45,58,1)] bg-[rgba(22,45,58,1)] cursor-pointer transition-all ${selectedTrips.length === 0 ? 'opacity-50' : 'opacity-100'
+                    }`}>
                   Open
                 </div>
               </div>
@@ -277,7 +275,7 @@ const UploadModal = ({
   selectedFileName,
 }: UploadModalType) => {
   return (
-    <div className="w-screen h-screen bg-black bg-opacity-50 absolute top-0 left-0 flex justify-center items-center">
+    <div className="w-screen h-screen bg-black bg-opacity-50 absolute top-0 left-0 flex justify-center items-center p-4">
       <div className="w-[34rem] rounded-lg flex flex-col py-8 px-3 gap-5 bg-white items-center relative">
         <div
           onClick={() => {
