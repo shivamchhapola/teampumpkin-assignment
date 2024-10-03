@@ -83,3 +83,5 @@ npm run dev
 ```
 
 `This will start the frontend on http://localhost:5173.`
+
+#### For testing purpose there's trip.xlsx and trip2.xlsx in frontend/src/assets.
