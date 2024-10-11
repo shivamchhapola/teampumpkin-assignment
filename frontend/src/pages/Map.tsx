@@ -23,6 +23,7 @@ import OverDisIcon from '../assets/overdisicon.svg';
 import OverDurIcon from '../assets/overDurIcon.svg';
 import StopDurIcon from '../assets/stopduricon.svg';
 import IdleDurIcon from '../assets/idledur.svg';
+import MarkerIcon from '../assets/marker.svg';
 
 const Map = () => {
   const navigate = useNavigate();
@@ -43,6 +44,11 @@ const Map = () => {
 
   const StopMarker = new Icon({
     iconUrl: StopMkrIcon,
+    iconAnchor: [10, 10],
+  });
+
+  const DefMarker = new Icon({
+    iconUrl: MarkerIcon,
     iconAnchor: [10, 10],
   });
 
@@ -162,6 +168,7 @@ const Map = () => {
               {trips.map((trip) => {
                 return (
                   <Marker
+                    icon={DefMarker}
                     key={`start-${trip._id}`}
                     position={trip.tripRoute[0]}>
                     <Tooltip permanent>Start</Tooltip>
@@ -172,6 +179,7 @@ const Map = () => {
               {trips.map((trip) => {
                 return (
                   <Marker
+                    icon={DefMarker}
                     key={`end-${trip._id}`}
                     position={trip.tripRoute[trip.tripRoute.length - 1]}>
                     <Tooltip permanent>End</Tooltip>
@@ -212,11 +220,10 @@ const Map = () => {
               onClick={() => {
                 selectTrip(0);
               }}
-              className={`text-sm cursor-pointer py-2 border-b ${
-                selectedTrip === 0
-                  ? 'text-[#1890FF] border-[#1890FF]'
-                  : 'opacity-25'
-              }`}>
+              className={`text-sm cursor-pointer py-2 border-b ${selectedTrip === 0
+                ? 'text-[#1890FF] border-[#1890FF]'
+                : 'opacity-25'
+                }`}>
               All
             </span>
             {allTrips.map((trip) => {
@@ -226,11 +233,10 @@ const Map = () => {
                     selectTrip(trip.tripIndex);
                   }}
                   key={trip.name}
-                  className={`text-sm cursor-pointer py-2 border-b ${
-                    selectedTrip === trip.tripIndex
-                      ? 'text-[#1890FF] border-[#1890FF]'
-                      : 'opacity-25'
-                  }`}>
+                  className={`text-sm cursor-pointer py-2 border-b ${selectedTrip === trip.tripIndex
+                    ? 'text-[#1890FF] border-[#1890FF]'
+                    : 'opacity-25'
+                    }`}>
                   {trip.name}
                 </span>
               );
